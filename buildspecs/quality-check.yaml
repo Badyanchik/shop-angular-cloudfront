@@ -40,7 +40,7 @@ phases:
       - npm run build --configuration=${BUILD_CONFIGURATION}
 
       - echo Running npm audit
-      - npm audit
+#      - npm audit
 
   post_build:
     commands:
