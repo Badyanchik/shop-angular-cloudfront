@@ -48,7 +48,7 @@ phases:
       - echo S3 bucket is cleared.
 
       # Show maintenance page while app is loaded
-      - aws cp maintenance/index.html  s3://${S3_BUCKET}/index.html
+      - aws s3 cp maintenance/index.html  s3://${S3_BUCKET}/index.html
       - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths "/index.html"
 
       # Copy dist folder to S3 bucket:
